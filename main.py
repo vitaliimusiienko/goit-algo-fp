@@ -1,3 +1,26 @@
+import argparse
+
+from linked_list.commands import register_commands as register_linked_list
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Algorithm CLI Bot"
+    )
+    subparsers = parser.add_subparsers(title="Modules", dest="module")
+    
+    register_linked_list(subparsers)
+    
+    args = parser.parse_args()
+
+    if hasattr(args, "func"):
+        args.func(args)
+    else:
+        parser.print_help()
+
+
+if __name__ == "__main__":
+    main()
+
 def show_menu():
     print("/n=====Algorithm Bot Menu=====")
     print("1.Singly linked list")
