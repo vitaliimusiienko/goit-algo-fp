@@ -5,6 +5,7 @@ from fractal.commands import register_commands as register_fractal
 from graphs.commands import register_commands as register_graphs
 from heap_visualization.commands import register_commands as register_heap_visualization
 from tree_traversal.commands import register_commands as register_traversal
+from knapsack.commands import register_commands as register_knapsack
 
 def main():
     parser = argparse.ArgumentParser(
@@ -17,6 +18,7 @@ def main():
     register_graphs(subparsers)
     register_heap_visualization(subparsers)
     register_traversal(subparsers)
+    register_knapsack(subparsers)
     
     args = parser.parse_args()
 
