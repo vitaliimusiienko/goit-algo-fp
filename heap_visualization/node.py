@@ -6,4 +6,4 @@ class HeapNode:
         self.right = None
         self.val = key
         self.color = color
-        self.id = str(uuid.uuid4())пе
+        self.id = str(uuid.uuid4())
